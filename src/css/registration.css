@@ -1,0 +1,159 @@
+/* Registration page styles */
+
+.reg-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 30px;
+}
+.reg-section h1 {
+  font-size: 32px;
+  color: var(--dark-sage);
+}
+.reg-section div {
+  display: flex;
+  gap: 40px;
+}
+.reg-section button {
+  padding: 14px 20px;
+  border-radius: 16px;
+  font-size: 18px;
+  border: none;
+  background-color: var(--sage-green);
+  color: var(--white);
+}
+
+.reg-section button:hover,
+.reg-section button:focus {
+  background-color: var(--dark-sage);
+}
+/* Form styles */
+.register-forms {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+.register-forms h2 {
+  color: var(--dark-sage);
+  font-size: 20px;
+}
+.form-wrapper {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+}
+.form-wrapper label {
+  color: var(--dark-sage);
+}
+.form-wrapper input,
+.form-wrapper textarea {
+  font-size: 16px;
+  padding: 4px;
+  border: 1px solid var(--dark-sage);
+  background-color: var(--light-beige);
+  border-radius: 8px;
+}
+.form-wrapper input:focus,
+.form-wrapper textarea:focus {
+  outline: none;
+  border: 1px solid var(--dark-sage);
+  box-shadow: 0 0 5px var(--sage-green);
+}
+.form-wrapper button {
+  padding: 14px;
+  border-radius: 16px;
+  font-size: 16px;
+  border: none;
+  background-color: var(--sage-green);
+  color: var(--white);
+  margin-top: 10px;
+}
+.form-wrapper button:hover,
+.form-wrapper button:focus {
+  background-color: var(--dark-sage);
+}
+
+.register-forms p {
+  color: var(--dark-sage);
+}
+.register-forms p button {
+  padding: 8px 20px;
+  border-radius: 14px;
+  font-size: 14px;
+  border: none;
+  background-color: var(--sage-green);
+  color: var(--white);
+  margin-left: 12px;
+}
+
+.register-forms p button:hover,
+.register-forms p button:focus {
+  background-color: var(--dark-sage);
+}
+
+/* Radio-buttons style */
+.form-radio-btn {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+/* Hide default radio button but make it clickable */
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Style the label to make it look like a custom radio button */
+.form-radio-btn label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--dark-sage);
+  margin-bottom: 10px;
+  padding-left: 30px;
+  position: relative;
+}
+
+/* Custom radio button */
+.form-radio-btn label::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--dark-sage);
+  border-radius: 50%;
+  background-color: var(--light-beige);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Checked state */
+.input[type="radio"]:checked + label::before {
+  background-color: var(--dark-sage);
+}
+
+/* Inner circle for checked state */
+input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--white);
+}
