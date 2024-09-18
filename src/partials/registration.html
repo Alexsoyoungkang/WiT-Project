@@ -24,7 +24,7 @@
           <li><a href="#vet-services">Vet Services</a></li>
           <li><a href="#sponsor">Sponsor</a></li>
           <li><a href="../partials/logIn.html">Sign In</a></li>
-          <li><a href="src/partials/registration.html">Register</a></li>
+          <li><a href="registration.html">Register</a></li>
         </ul>
       </nav>
 
@@ -77,63 +77,37 @@
               <label>Confirm password:</label><input type="password" />
               <label>I am interested in: </label>
               <div class="form-radio-btn">
-                <label for="adopt"
-                  ><input
-                    type="radio"
-                    id="adopt"
-                    name="interests"
-                    value="Adopting a pet"
-                  />Adopting a pet</label
-                >
-                <label for="foster"
-                  ><input
-                    type="radio"
-                    id="foster"
-                    name="interests"
-                    value="Fostering a pet"
-                  />Fostering a pet</label
-                >
-                <label for="volunteer"
-                  ><input
-                    type="radio"
-                    id="volunteer"
-                    name="interests"
-                    value="Volunteering"
-                  />Volunteering</label
-                >
-                <label for="rescue"
-                  ><input
-                    type="radio"
-                    id="rescue"
-                    name="interests"
-                    value="Receiving newsletters and updates"
-                  />Receiving newsletters and updates</label
-                >
+                <input type="radio" id="adopt" name="interests" value="Adopting a pet" />
+                <label for="adopt">Adopting a pet</label>
+              
+                <input type="radio" id="foster" name="interests" value="Fostering a pet" />
+                <label for="foster">Fostering a pet</label>
+              
+                <input type="radio" id="volunteer" name="interests" value="Volunteering" />
+                <label for="volunteer">Volunteering</label>
+              
+                <input
+                  type="radio"
+                  id="rescue"
+                  name="interests"
+                  value="Receiving newsletters and updates"
+                />
+                <label for="rescue">Receiving newsletters and updates</label>
               </div>
+              
               <label>I Preferred Contact Method: </label>
               <div class="form-radio-btn">
-                <label
-                  ><input
-                    type="radio"
-                    name="contact"
-                    value="Email"
-                  />Email</label
-                >
-                <label
-                  ><input
-                    type="radio"
-                    name="contact"
-                    value="Phone"
-                  />Phone</label
-                >
-                <label
-                  ><input
-                    type="radio"
-                    name="contact"
-                    value="Either"
-                  />Either</label
-                >
+                <input type="radio" id="email" name="contact" value="Email" />
+                <label for="email">Email</label>
+
+                <input type="radio" id="phone" name="contact" value="Phone" />
+                <label for="phone">Phone</label>
+
+                <input type="radio" id="either" name="contact" value="Either" />
+                <label for="either">Either</label>
               </div>
+
+
               <label>
                 <input type="checkbox" name="policy-agreement" />
                 I agree to the

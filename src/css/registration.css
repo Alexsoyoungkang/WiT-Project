@@ -158,7 +158,7 @@ input[type="radio"] {
 }
 
 /* Checked state */
-.input[type="radio"]:checked + label::before {
+input[type="radio"]:checked + label::before {
   background-color: var(--dark-sage);
 }
 
