@@ -69,7 +69,7 @@ ul {
 .reg-section button:focus {
   background-color: var(--dark-sage);
 }
-
+/* Form styles */
 .register-forms {
   display: flex;
   flex-direction: column;
@@ -136,9 +136,64 @@ ul {
 .register-forms p button:focus {
   background-color: var(--dark-sage);
 }
+
+/* Radio-buttons style */
 .form-radio-btn {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   gap: 6px;
+}
+
+/* Hide default radio button but make it clickable */
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Style the label to make it look like a custom radio button */
+.form-radio-btn label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--dark-sage);
+  margin-bottom: 10px;
+  padding-left: 30px;
+  position: relative;
+}
+
+/* Custom radio button */
+.form-radio-btn label::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--dark-sage);
+  border-radius: 50%;
+  background-color: var(--light-beige);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Checked state */
+.input[type="radio"]:checked + label::before {
+  background-color: var(--dark-sage);
+}
+
+/* Inner circle for checked state */
+input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--white);
 }

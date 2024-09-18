@@ -67,7 +67,9 @@
         <div>
           <!-- <img src="../assets/cat.png" alt="cat" height="400" /> -->
           <div>
-            <h2>Create your account &#128062;</h2>
+            <h2>
+              Create your account <span class="paws-print">&#128062;</span>
+            </h2>
             <form action="" class="form-wrapper">
               <label>First Name:</label><input type="text" />
               <label>Last Name:</label><input type="text" />
@@ -81,32 +83,62 @@
               <label>Confirm password:</label><input type="password" />
               <label>I am interested in: </label>
               <div class="form-radio-btn">
-                <label
-                  ><input type="radio" value="Adopting a pet" />Adopting a
-                  pet</label
-                >
-                <label
-                  ><input type="radio" value="Fostering a pet" />Fostering a
-                  pet</label
-                >
-                <label
+                <label for="adopt"
                   ><input
                     type="radio"
+                    id="adopt"
+                    name="interests"
+                    value="Adopting a pet"
+                  />Adopting a pet</label
+                >
+                <label for="foster"
+                  ><input
+                    type="radio"
+                    id="foster"
+                    name="interests"
+                    value="Fostering a pet"
+                  />Fostering a pet</label
+                >
+                <label for="volunteer"
+                  ><input
+                    type="radio"
+                    id="volunteer"
+                    name="interests"
                     value="Volunteering"
                   />Volunteering</label
                 >
-                <label
+                <label for="rescue"
                   ><input
                     type="radio"
+                    id="rescue"
+                    name="interests"
                     value="Receiving newsletters and updates"
                   />Receiving newsletters and updates</label
                 >
               </div>
               <label>I Preferred Contact Method: </label>
               <div class="form-radio-btn">
-                <label><input type="radio" value="Email" />Email</label>
-                <label><input type="radio" value="Phone" />Phone</label>
-                <label><input type="radio" value="Either" />Either</label>
+                <label
+                  ><input
+                    type="radio"
+                    name="contact"
+                    value="Email"
+                  />Email</label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    name="contact"
+                    value="Phone"
+                  />Phone</label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    name="contact"
+                    value="Either"
+                  />Either</label
+                >
               </div>
               <label>
                 <input type="checkbox" name="policy-agreement" />
@@ -120,7 +152,11 @@
         <div>
           <p>
             Already registered?
-            <a href="./logIn.html"> <button>Login here &#128062;</button></a>
+            <a href="./logIn.html">
+              <button>
+                Login here <span class="paws-print">&#128062;</span>
+              </button></a
+            >
           </p>
         </div>
       </section>
@@ -132,7 +168,10 @@
       >
         <div>
           <div>
-            <h2>Register your rescue organization or Vet &#128062;</h2>
+            <h2>
+              Register your rescue organization or Vet
+              <span class="paws-print">&#128062;</span>
+            </h2>
             <form action="" class="form-wrapper">
               <label>Name:</label><input type="text" /> <label>Address:</label
               ><input type="text" /> <label>City:</label><input type="text" />
@@ -154,7 +193,9 @@
         <p>
           Already registered?
           <a href="./logIn.html">
-            <button type="button">Login here &#128062;</button></a
+            <button type="button">
+              Login here <span class="paws-print">&#128062;</span>
+            </button></a
           >
         </p>
       </section>
