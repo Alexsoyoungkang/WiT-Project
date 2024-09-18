@@ -1,28 +1,144 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #2b2b2b;
-  color: rgb(214, 214, 214);
-  max-width: 900px;
-  margin: 0 auto;
+  font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+  color: #333333;
+  background-color: #f5f5dc;
+  size: 16px;
+  width: 100%;
+  border-radius: 8px;
 }
 
-#root {
-  background-color: #3f3f3f;
-  padding: 60px;
-  border-radius: 20px;
-  height: 100%;
-  margin-top: 100px;
+:root {
+  /* Primary Colors */
+  --sage-green: #597d72; /*used for headers, buttons, and highlights*/
+  --beige: #f5f5dc; /*used for backgrounds*/
+  /* Secondary Colors */
+  --dark-sage: #2f4f4f; /* used for text on light backgrounds */
+  --light-beige: #faf9f6; /* used for backgrounds or cards */
+  /* Accent Colors */
+  --coral: #ff7f50; /* used for call-to-action buttons or important highlights*/
+  --white: #ffffff; /*used for text on dark backgrounds or overlays*/
+  /* Neutral Colors */
+  --dark-grey: #333333; /* used for body text*/
+  --light-grey: #cccccc; /* used for borders or disabled elements*/
 }
 
-.logo {
-  display: block;
-  margin: 0 auto;
-}
-
-h1 {
-  margin-top: 50px;
-}
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 p {
-  font-size: 22px;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+* {
+  transition: all 200ms;
+}
+
+/* Registration page styles */
+
+.reg-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 30px;
+}
+.reg-section h1 {
+  font-size: 32px;
+  color: var(--dark-sage);
+}
+.reg-section div {
+  display: flex;
+  gap: 40px;
+}
+.reg-section button {
+  padding: 14px 20px;
+  border-radius: 16px;
+  font-size: 18px;
+  border: none;
+  background-color: var(--sage-green);
+  color: var(--white);
+}
+
+.reg-section button:hover,
+.reg-section button:focus {
+  background-color: var(--dark-sage);
+}
+
+.register-forms {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+.register-forms h2 {
+  color: var(--dark-sage);
+  font-size: 20px;
+}
+.form-wrapper {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+}
+.form-wrapper label {
+  color: var(--dark-sage);
+}
+.form-wrapper input,
+.form-wrapper textarea {
+  font-size: 16px;
+  padding: 4px;
+  border: 1px solid var(--dark-sage);
+  background-color: var(--light-beige);
+  border-radius: 8px;
+}
+.form-wrapper input:focus,
+.form-wrapper textarea:focus {
+  outline: none;
+  border: 1px solid var(--dark-sage);
+  box-shadow: 0 0 5px var(--sage-green);
+}
+.form-wrapper button {
+  padding: 14px;
+  border-radius: 16px;
+  font-size: 16px;
+  border: none;
+  background-color: var(--sage-green);
+  color: var(--white);
+  margin-top: 10px;
+}
+.form-wrapper button:hover,
+.form-wrapper button:focus {
+  background-color: var(--dark-sage);
+}
+
+.register-forms p {
+  color: var(--dark-sage);
+}
+.register-forms p button {
+  padding: 8px 20px;
+  border-radius: 14px;
+  font-size: 14px;
+  border: none;
+  background-color: var(--sage-green);
+  color: var(--white);
+  margin-left: 12px;
+}
+
+.register-forms p button:hover,
+.register-forms p button:focus {
+  background-color: var(--dark-sage);
+}
+.form-radio-btn {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
 }
