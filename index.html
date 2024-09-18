@@ -1,42 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="shortcut icon" href="./favicon.png" />
-        <meta name="theme-color" content="#000000" />
-        <title>Simple Boilerplate</title>
-        <link rel="stylesheet" type="text/css" href="src/css/index.css">
-        <!-- Add additional CSS & JS files as necessary here -->
-    </head>
-    <body>
-        <!-- Add your site or application content here -->
-        <div id="root">
-            <img src="src/assets/simple-boilerplate-logo@3x.png" class="logo" alt="logo" />
-            <h1>Welcome to Simple Boilerplate!</h1>
-            <p>
-                This boilerplate is ready for HTML/CSS, Javascript, and JQuery projects. 
-                It includes a live server that lets you see HTML/JS/CSS changes with every save.
-            </p>
-            
-            <p id="subtext">
-                An Example JavaScript Hook.
-            </p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAWS</title>
+    <link rel="stylesheet" href="src/css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
-            <h2>Instructions:</h2>
-            <p>
-                To see live changes, please go to the root folder ('simple-boilerplate/')
-                and run "npm start".
-            </p>
-            <p>
-                To start coding, start changing the files within src/css and src/js. 
-                Images can be stored in src/assets.
-            </p>
+</head>
+<body>
+    <!-- Nav Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#adopt">Adopt</a></li>
+            <li><a href="#rescues">Rescues</a></li>
+            <li><a href="#volunteers">Volunteers</a></li>
+            <li><a href="#vet-services">Vet Services</a></li>
+            <li><a href="#sponsor">Sponsor</a></li>
+            <li><a href="#sign-in">Sign In</a></li>
+            <li><a href="src/partials/registration.html">Register</a></li>
+        </ul>
+    </nav>
+
+    <!-- Headings Section -->
+    <section id="headings">
+        <h1>Find your new best friend today!</h1>
+        <button onclick="browsePets()">Browse Pets</button>
+        <button onclick="learnHowToHelp()">Learn How to Help</button>
+    </section>
+
+    <!-- Dog Profiles Section -->
+    <section id="dog-profiles">
+        <h2>Featured Adoptable Pets</h2>
+        <div class="profiles">
+            <div class="profile">
+                <img src="src/assets/hero-image.jpg" alt="Dog 1">
+                <h2>Buddy</h2>
+                <button onclick="viewDetails('Buddy')">View Details</button>
+            </div>
+            <div class="profile">
+                <img src="src/assets/hero-image.jpg" alt="Dog 2">
+                <h2>Max</h2>
+                <button onclick="viewDetails('Max')">View Details</button>
+            </div>
+            <div class="profile">
+                <img src="src/assets/hero-image.jpg" alt="Dog 3">
+                <h2>Charlie</h2>
+                <button onclick="viewDetails('Charlie')">View Details</button>
+            </div>
+        </div>    
+    </section>
+
+    <!-- Rescue Profiles Section -->
+    <section id="rescue-profiles">
+        <h2>Featured Rescue Organizations</h2>
+        <div class="profiles">
+            <div class="profile">
+                <img src="src/assets/happy tails rescue.png" alt="Rescue 1">
+                <h2>Happy Tails Rescue</h2>
+                <button onclick="viewDetails('Buddy')">View Details</button>
+            </div>
+            <div class="profile">
+                <img src="src/assets/Furry Friends Shelter.png" alt="Rescue 2">
+                <h2>Furry Friends Shelter</h2>
+                <button onclick="viewDetails('Max')">View Details</button>
+            </div>
+            <div class="profile">
+                <img src="src/assets/Paws and Claws Haven.png" alt="Rescue 3">
+                <h2>Paws and Claws Haven</h2>
+                <button onclick="viewDetails('Charlie')">View Details</button>
+            </div>
+        </div>    
+    </section>
+
+    <!-- Volunteer Opportunities Section -->
+    <section id="volunteers">
+        <h2>Join our team of dedicated volunteers and make a difference.</h2>
+        <button onclick="getInvolved()">Get Involved</button>
+    </section>
+
+
+    <!-- Email marketing Section -->
+    <section id="email-marketing">
+        <h2>Newsletter Sign-Up</h2>
+        <div class="email-signup">
+            <input type="email" id="email-address" placeholder="Enter your email address">
+            <button onclick="getInvolved()">SUBSCRIBE</button>
         </div>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-        <!-- ================================ -->
-        <!-- Add more JavaScript files here!! -->
-        <!-- ================================ -->
-        <script type="text/javascript" src="src/js/other.js"></script>
-        <script type="text/javascript" src="src/js/index.js"></script>
-    </body>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <ul>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#find-a-pet">Find a Pet</a></li>
+            <li><a href="#donate">Donate</a></li>
+            <li><a href="#volunteer">Volunteer</a></li>
+            <li><a href="#rescue-organizations">Rescue Organizations</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+            <li><a href="#privacy-policy">Privacy Policy</a></li>
+            <li><a href="#terms-of-service">Terms of Service</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+            <li><a href="#newsletter">Newsletter</a></li>
+        </ul>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
 </html>
