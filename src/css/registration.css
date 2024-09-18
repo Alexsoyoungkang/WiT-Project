@@ -1,20 +1,27 @@
 /* Registration page styles */
 
+#reg-body {
+  height: 100vh;
+}
+
 .reg-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 30px;
-  padding-bottom: 30px;
+  padding: 30px;
+
 }
 .reg-section h1 {
   font-size: 32px;
   color: var(--dark-sage);
+  text-align: center;
 }
 .reg-section div {
   display: flex;
   gap: 40px;
+  justify-content: center;
 }
 .reg-section button {
   padding: 14px 20px;
@@ -30,12 +37,22 @@
   background-color: var(--dark-sage);
 }
 /* Form styles */
+
+#forsters-adopters-form {
+  margin-top: -450px;
+}
+
+#organizations-vets-form {
+  margin-top: -450px;
+}
+
 .register-forms {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
   align-items: center;
+  min-height: 100vh;
 }
 .register-forms h2 {
   color: var(--dark-sage);
