@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="./favicon.png" />
+    <title>PAWS REGISTRATION</title>
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/registration.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Add additional CSS & JS files as necessary here -->
+  </head>
+  <body>
+    <main>
+      <!-- Nav Bar -->
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#adopt">Adopt</a></li>
+          <li><a href="#rescues">Rescues</a></li>
+          <li><a href="#volunteers">Volunteers</a></li>
+          <li><a href="#vet-services">Vet Services</a></li>
+          <li><a href="#sponsor">Sponsor</a></li>
+          <li><a href="#sign-in">Sign In</a></li>
+          <li><a href="src/partials/registration.html">Register</a></li>
+        </ul>
+      </nav>
+
+      <!-- Who you are buttons section -->
+      <section>
+        <div class="reg-section">
+          <h1>Choese who are you?</h1>
+
+          <div>
+            <button
+              type="button"
+              class="forsters-adopters"
+              onclick="openForm('forsters-adopters')"
+            >
+              Forsters/Adopters
+            </button>
+            <button
+              type="button"
+              class="organizatioms-vets"
+              onclick="openForm('organizations-vets')"
+            >
+              Rescue organizations/Vets
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Registration forms (hidden by default) -->
+      <!-- Forsters/Adopters -->
+      <section
+        id="forsters-adopters-form"
+        style="display: none"
+        class="register-forms"
+      >
+        <div>
+          <div>
+            <h2>
+              Create your account <span class="paws-print">&#128062;</span>
+            </h2>
+            <form action="" class="form-wrapper">
+              <label>First Name:</label><input type="text" />
+              <label>Last Name:</label><input type="text" />
+              <label>Phone Number:</label><input type="tel" />
+              <label>Street Address:</label><input type="text" />
+              <label>City:</label><input type="text" />
+              <label>State/Province:</label><input type="text" />
+              <label>ZIP/Postal Code:</label><input type="text" />
+              <label>Email Address:</label><input type="email" />
+              <label>Password:</label><input type="password" />
+              <label>Confirm password:</label><input type="password" />
+              <label>I am interested in: </label>
+              <div class="form-radio-btn">
+                <label for="adopt"
+                  ><input
+                    type="radio"
+                    id="adopt"
+                    name="interests"
+                    value="Adopting a pet"
+                  />Adopting a pet</label
+                >
+                <label for="foster"
+                  ><input
+                    type="radio"
+                    id="foster"
+                    name="interests"
+                    value="Fostering a pet"
+                  />Fostering a pet</label
+                >
+                <label for="volunteer"
+                  ><input
+                    type="radio"
+                    id="volunteer"
+                    name="interests"
+                    value="Volunteering"
+                  />Volunteering</label
+                >
+                <label for="rescue"
+                  ><input
+                    type="radio"
+                    id="rescue"
+                    name="interests"
+                    value="Receiving newsletters and updates"
+                  />Receiving newsletters and updates</label
+                >
+              </div>
+              <label>I Preferred Contact Method: </label>
+              <div class="form-radio-btn">
+                <label
+                  ><input
+                    type="radio"
+                    name="contact"
+                    value="Email"
+                  />Email</label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    name="contact"
+                    value="Phone"
+                  />Phone</label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    name="contact"
+                    value="Either"
+                  />Either</label
+                >
+              </div>
+              <label>
+                <input type="checkbox" name="policy-agreement" />
+                I agree to the
+                <a href="">Terms of Service and Privacy Policy.</a>
+              </label>
+              <button type="submit">Create Account</button>
+            </form>
+          </div>
+        </div>
+        <div>
+          <p>
+            Already registered?
+            <a href="./logIn.html">
+              <button>
+                Login here <span class="paws-print">&#128062;</span>
+              </button></a
+            >
+          </p>
+        </div>
+      </section>
+
+      <!-- Rescue organizations/Vets -->
+      <section
+        id="organizations-vets-form"
+        style="display: none"
+        class="register-forms"
+      >
+        <div>
+          <div>
+            <h2>
+              Register your rescue organization or Vet
+              <span class="paws-print">&#128062;</span>
+            </h2>
+            <form action="" class="form-wrapper">
+              <label>Name:</label><input type="text" /> <label>Address:</label
+              ><input type="text" /> <label>City:</label><input type="text" />
+              <label>State/Province:</label><input type="text" />
+              <label>ZIP/Postal Code:</label><input type="text" />
+              <label>Contact Person:</label><input type="text" />
+              <label>Phone number:</label><input type="tel" />
+              <label>Website:</label><input type="text" />
+              <label>Mission Statement: </label
+              ><textarea name="" id=""></textarea> <label>Email:</label
+              ><input type="email" /> <label>Password:</label
+              ><input type="password" /> <label>Confirm password:</label
+              ><input type="password" />
+              <button type="submit">Submit Registration</button>
+            </form>
+          </div>
+        </div>
+        <p>
+          Already registered?
+          <a href="./logIn.html">
+            <button type="button">
+              Login here <span class="paws-print">&#128062;</span>
+            </button></a
+          >
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <ul>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#find-a-pet">Find a Pet</a></li>
+        <li><a href="#donate">Donate</a></li>
+        <li><a href="#volunteer">Volunteer</a></li>
+        <li><a href="#rescue-organizations">Rescue Organizations</a></li>
+        <li><a href="#contact-us">Contact Us</a></li>
+        <li><a href="#privacy-policy">Privacy Policy</a></li>
+        <li><a href="#terms-of-service">Terms of Service</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+      </ul>
+    </footer>
+    <script type="text/javascript" src="../js/registration.js"></script>
+  </body>
+</html>
