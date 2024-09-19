@@ -25,6 +25,15 @@ body {
   width: 100%;
 }
 
+#hero-logo {
+  width: 260px;
+  margin-top: -60px;
+}
+
+#hero-heading {
+  margin-top: -80px;
+}
+
 .sub-heading {
   font-size: 1.25rem;
   margin-top: 10px;
@@ -120,7 +129,7 @@ section {
 
 .hero h1, .hero h2 {
   margin: 0;
-  padding: 0 10px;
+  padding: 10px 10px;
 }
 
 .hero-buttons {
