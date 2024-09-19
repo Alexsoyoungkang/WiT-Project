@@ -62,8 +62,15 @@ nav ul li a {
 #headings {
   font-size: 30px;
   text-align: center;
-  padding: 25px;
-  padding-bottom: 40px;
+  padding: 40px;
+}
+
+#heading-text {
+  padding: 30px
+}
+
+#rescue-heading {
+  padding: 30px
 }
 
 button {
@@ -93,6 +100,10 @@ button :hover {
 #dog-profiles h2 {
   margin-bottom: 20px; /* Space between the heading and the profiles */
   font-size: 24px; /* Adjust font size as needed */
+}
+
+#rescue-profiles h2 {
+  margin-bottom: 20px;
 }
 
 .profiles {
@@ -127,6 +138,11 @@ button :hover {
   align-items: center;
   text-align: center;
   width: auto;
+}
+
+#email-address {
+  width: 200px;
+  height: 25px
 }
 
 footer {
