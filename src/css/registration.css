@@ -1,7 +1,83 @@
 /* Registration page styles */
 
-#reg-body {
+:root {
+  /* Primary Colors */
+  --sage-green: #597d72; /*used for headers, buttons, and highlights*/
+  --beige: #f5f5dc; /*used for backgrounds*/
+  /* Secondary Colors */
+  --dark-sage: #2f4f4f; /* used for text on light backgrounds */
+  --light-beige: #faf9f6; /* used for backgrounds or cards */
+  /* Accent Colors */
+  --coral: #ff7f50; /* used for call-to-action buttons or important highlights*/
+  --white: #ffffff; /*used for text on dark backgrounds or overlays*/
+  /* Neutral Colors */
+  --dark-grey: #333333; /* used for body text*/
+  --light-grey: #cccccc; /* used for borders or disabled elements*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+* {
+  transition: all 200ms;
+  font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+  color: #333333;
+  size: 16px;
+  border-radius: 8px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+}
+
+/* Header styles */
+nav {
+  background-color: #597d72;
+  color: #ffffff;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  float: right;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+#headings {
+  font-size: 30px;
+  text-align: center;
+  padding: 25px;
+  padding-bottom: 40px;
 }
 
 .reg-section {
@@ -10,8 +86,8 @@
   justify-content: flex-start;
   align-items: center;
   gap: 30px;
-  padding: 30px;
-
+  padding-top: 40px;
+  margin-bottom: auto;
 }
 .reg-section h1 {
   font-size: 32px;
@@ -36,15 +112,8 @@
 .reg-section button:focus {
   background-color: var(--dark-sage);
 }
+
 /* Form styles */
-
-#forsters-adopters-form {
-  margin-top: -450px;
-}
-
-#organizations-vets-form {
-  margin-top: -450px;
-}
 
 .register-forms {
   display: flex;
@@ -52,7 +121,7 @@
   justify-content: center;
   gap: 20px;
   align-items: center;
-  min-height: 100vh;
+  padding: 40px 0;
 }
 .register-forms h2 {
   color: var(--dark-sage);
@@ -115,6 +184,7 @@
 }
 
 /* Radio-buttons style */
+
 .form-radio-btn {
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -122,7 +192,6 @@
   gap: 6px;
 }
 
-/* Hide default radio button but make it clickable */
 input[type="radio"] {
   position: absolute;
   opacity: 0;
@@ -130,7 +199,6 @@ input[type="radio"] {
   height: 0;
 }
 
-/* Style the label to make it look like a custom radio button */
 .form-radio-btn label {
   display: inline-flex;
   align-items: center;
@@ -142,7 +210,6 @@ input[type="radio"] {
   position: relative;
 }
 
-/* Custom radio button */
 .form-radio-btn label::before {
   content: "";
   display: inline-block;
@@ -157,20 +224,108 @@ input[type="radio"] {
   transform: translateY(-50%);
 }
 
-/* Checked state */
 input[type="radio"]:checked + label::before {
-  background-color: var(--dark-sage);
+  background-color: var(--white);
 }
 
-/* Inner circle for checked state */
 input[type="radio"]:checked + label::after {
   content: "";
   position: absolute;
   top: 50%;
-  left: 7px;
+  left: 4px;
   transform: translateY(-50%);
-  width: 8px;
-  height: 8px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  background-color: var(--white);
+  background-color: var(--dark-sage);
+}
+
+/* Footer styles */
+
+footer {
+  background-color: var(--sage-green);
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  margin-top: auto;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Checkbox Policy */
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.agreement {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--dark-sage);
+  padding-left: 30px;
+  position: relative;
+}
+
+.agreement::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--dark-sage);
+  border-radius: 4px;
+  background-color: var(--light-beige);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
+}
+
+input[type="checkbox"]:checked + .agreement::before {
+  background-color: var(--sage-green);
+  border-color: var(--sage-green);
+}
+
+input[type="checkbox"]:checked + .agreement::after {
+  content: "\2713";
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: var(--white);
+}
+
+label a {
+  color: var(--coral);
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+label a:hover {
+  text-decoration: underline;
 }
