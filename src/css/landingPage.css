@@ -3,6 +3,7 @@ body {
   color: #333;
   background-color: #F5F5DC;
   size: 16px;
+  margin: 0;
 }
 
 .hero {
@@ -22,6 +23,15 @@ body {
 
 .hero-text {
   width: 100%;
+}
+
+#hero-logo {
+  width: 260px;
+  margin-top: -60px;
+}
+
+#hero-heading {
+  margin-top: -80px;
 }
 
 .sub-heading {
@@ -74,21 +84,70 @@ h1 {
   margin-top: 20px;
 }
 
+h2 {
+  text-align: center;
+}
+
+p, li {
+  font-size: 17px;
+}
+
 section {
   padding: 40px 20px;
 }
+
+.hero {
+  background-image: url('../assets/dog_and_cat_pattern-11.jpg'); /* Use your custom or downloaded pattern */
+  background-repeat: repeat;
+  background-size: 100%; /* Adjust the size of the pattern */
+  background-color: rgba(255, 255, 255, 0.7); /* Set a semi-transparent background color */
+  position: relative;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Keep the content above the background */
+}
+
+.hero::before {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.6); /* Add transparency to the pattern background */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1; /* Position the pattern behind the content */
+  opacity: 1; /* Make the pattern semi-transparent */
+}
+
+.hero-text {
+  z-index: 3; /* Ensure text stays visible above everything */
+  text-align: center;
+  color: #333; /* Make sure the text is legible */
+}
+
+.hero h1, .hero h2 {
+  margin: 0;
+  padding: 10px 10px;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
 
 
 /* User Story Section */
 .user-story-content {
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  margin: 20px;
 }
 
 .user-image-container {
-  width: 30%;
-  margin-right: 20px;
+  width: 50%;
+  margin-right: 50px;
 }
 
 .user-image {
@@ -97,7 +156,7 @@ section {
 }
 
 .user-story-text {
-  width: 70%;
+  width: 50%;
 }
 
 
@@ -131,9 +190,16 @@ h2 {
 }
 
 /* Benefits Section */
+.benefits {
+  text-align: center;
+}
+
 .benefits ul {
   list-style-type: disc;
-  padding-left: 20px;
+  display: inline-block;
+  padding: 0;
+  margin: 0 auto;
+  text-align: justify;
 }
 
 .benefits ul li {
