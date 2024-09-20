@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="./favicon.png" />
+    <title>PAWS LOGIN</title>
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Add additional CSS & JS files as necessary here -->
+  </head>
+  <body>
+    <main>
+      <!-- Nav Bar -->
+      <nav>
+        <ul>
+          <li><a href="#adoptDashboard">Dashboard</a></li>
+          <li><a href="#adoptMessage">Message</a></li>
+          <li><a href="#adoptNotification">Notification</a></li>
+          <li><a href="#adoptSettings">Settings</a></li>
+          <li>
+            <a href="../../index.html">Log out</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1>Welcome, <span id="user-name"></span>!</h1>
+        <p>Manage Pets</p>
+        <a href="./uploadDogProfile.html"
+          ><button type="button">Add New pet</button></a
+        >
+
+        <div>
+          <h2>Current Listings</h2>
+          <ul>
+            <li class="pet-image">
+              <img
+                src="../assets/dog9.jpeg"
+                alt="cat"
+                width="130"
+                height="130"
+              />
+              <div>
+                <div class="pet-info">
+                  <p>Name: Bella</p>
+                  <p>Status: Available</p>
+                </div>
+                <div>
+                  <button type="button">Edit</button>
+                  <button type="button">Remuve</button>
+                </div>
+              </div>
+            </li>
+            <li>
+              <img
+                src="../assets/dog7.jpeg"
+                alt="dog"
+                width="130"
+                height="130"
+              />
+              <div>
+                <div class="pet-info">
+                  <p>Name: Max</p>
+                  <p>Status: Pending Adoption</p>
+                </div>
+                <div>
+                  <button type="button">Edit</button>
+                  <button type="button">Remuve</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <ul>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#find-a-pet">Find a Pet</a></li>
+        <li><a href="#donate">Donate</a></li>
+        <li><a href="#volunteer">Volunteer</a></li>
+        <li><a href="#rescue-organizations">Rescue Organizations</a></li>
+        <li><a href="#contact-us">Contact Us</a></li>
+        <li><a href="#privacy-policy">Privacy Policy</a></li>
+        <li><a href="#terms-of-service">Terms of Service</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+      </ul>
+    </footer>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const userName = localStorage.getItem("loggedInUser").toUpperCase();
+        const nameElement = document.getElementById("user-name");
+
+        if (userName) {
+          nameElement.textContent = userName;
+        } else {
+          nameElement.textContent = "Guest";
+        }
+      });
+    </script>
+  </body>
+</html>

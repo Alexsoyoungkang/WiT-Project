@@ -1,4 +1,4 @@
-/* Registration page styles */
+/* Dushdoard page styles */
 
 :root {
   /* Primary Colors */
@@ -79,67 +79,35 @@ nav ul li a {
   padding-bottom: 40px;
 }
 
-.reg-section {
+section {
+  padding: 40px 80px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 30px;
-  padding-top: 40px;
-  margin-bottom: auto;
-}
-.reg-section h1 {
-  font-size: 32px;
-  color: var(--dark-sage);
-  text-align: center;
-}
-.reg-section div {
-  display: flex;
-  gap: 40px;
-  justify-content: center;
-}
-.reg-section button {
-  padding: 14px 20px;
-  border-radius: 16px;
-  font-size: 18px;
-  border: none;
-  background-color: var(--sage-green);
-  color: var(--white);
+  gap: 16px;
 }
 
-.reg-section button:hover,
-.reg-section button:focus {
-  background-color: var(--dark-sage);
-}
-
-/* Form styles */
-
-.register-forms {
+form {
+  width: 600px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 20px;
-  align-items: center;
-  padding: 40px 0;
+  padding: 20px 0;
+  margin: 0;
 }
-.register-forms h2 {
-  color: var(--dark-sage);
-  font-size: 20px;
-}
-.form-wrapper {
-  width: 450px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 14px;
+
+h1 {
+  color: var(--sage-green);
+  font-size: 36px;
 }
 
 .form-wrapper label {
   color: var(--dark-sage);
+  font-size: 14px;
 }
 .form-wrapper input,
-.form-wrapper textarea {
-  font-size: 16px;
+.form-wrapper textarea,
+.form-wrapper select {
+  font-size: 14px;
   padding: 4px;
   border: 1px solid var(--dark-sage);
   background-color: var(--light-beige);
@@ -152,43 +120,66 @@ nav ul li a {
   box-shadow: 0 0 5px var(--sage-green);
 }
 .form-wrapper button {
-  padding: 14px;
-  border-radius: 16px;
-  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
   border: none;
   background-color: var(--sage-green);
   color: var(--white);
-  margin-top: 10px;
+  margin-right: 8px;
 }
 .form-wrapper button:hover,
 .form-wrapper button:focus {
   background-color: var(--dark-sage);
 }
 
-.register-forms p {
+form p {
+  font-size: 16px;
+  font-weight: 700;
   color: var(--dark-sage);
+  margin-bottom: 6px;
 }
-.register-forms p button {
-  padding: 8px 20px;
-  border-radius: 14px;
-  font-size: 14px;
-  border: none;
-  background-color: var(--sage-green);
-  color: var(--white);
-  margin-left: 12px;
+.basic-info,
+.health-info,
+.behavior,
+.adoption-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.register-forms p button:hover,
-.register-forms p button:focus {
-  background-color: var(--dark-sage);
+.behavior div {
+  display: grid;
+  grid-template-columns: 160px 160px 160px;
+  grid-template-rows: repeat(20px);
+  gap: 6px;
+}
+input[type="text"] {
+  width: 490px;
+}
+select {
+  width: 500px;
+}
+
+.upload-photo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid var(--dark-sage);
+  padding: 10px;
+  background-color: var(--light-beige);
+}
+.upload-photo input {
+  border: none;
+  background-color: transparent;
 }
 
 /* Radio-buttons style */
 
 .form-radio-btn {
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 6px;
 }
 
@@ -203,7 +194,7 @@ input[type="radio"] {
   display: inline-flex;
   align-items: center;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   color: var(--dark-sage);
   margin-bottom: 10px;
   padding-left: 30px;
@@ -213,8 +204,8 @@ input[type="radio"] {
 .form-radio-btn label::before {
   content: "";
   display: inline-block;
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
   border: 2px solid var(--dark-sage);
   border-radius: 50%;
   background-color: var(--light-beige);
@@ -234,8 +225,57 @@ input[type="radio"]:checked + label::after {
   top: 50%;
   left: 4px;
   transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--dark-sage);
+}
+
+/* Checkbox */
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.check {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--dark-sage);
+  padding-left: 30px;
+  position: relative;
+}
+
+.check::before {
+  content: "";
+  display: inline-block;
   width: 14px;
   height: 14px;
+  border: 2px solid var(--dark-sage);
+  border-radius: 50%;
+  background-color: var(--light-beige);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+input[type="checkbox"]:checked + .check::before {
+  background-color: var(--white);
+}
+
+input[type="checkbox"]:checked + .check::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background-color: var(--dark-sage);
 }
@@ -269,63 +309,4 @@ footer ul li {
 footer ul li a {
   color: #ffffff;
   text-decoration: none;
-}
-
-/* Checkbox Policy */
-
-input[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.agreement {
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  font-size: 16px;
-  color: var(--dark-sage);
-  padding-left: 30px;
-  position: relative;
-}
-
-.agreement::before {
-  content: "";
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  border: 2px solid var(--dark-sage);
-  border-radius: 4px;
-  background-color: var(--light-beige);
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
-}
-
-input[type="checkbox"]:checked + .agreement::before {
-  background-color: var(--sage-green);
-  border-color: var(--sage-green);
-}
-
-input[type="checkbox"]:checked + .agreement::after {
-  content: "\2713";
-  position: absolute;
-  top: 50%;
-  left: 4px;
-  transform: translateY(-50%);
-  font-size: 18px;
-  color: var(--white);
-}
-
-label a {
-  color: var(--coral);
-  text-decoration: none;
-  margin-left: 4px;
-}
-
-label a:hover {
-  text-decoration: underline;
 }

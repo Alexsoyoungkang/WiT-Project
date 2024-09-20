@@ -1,0 +1,163 @@
+/* Dushdoard page styles */
+
+:root {
+  /* Primary Colors */
+  --sage-green: #597d72; /*used for headers, buttons, and highlights*/
+  --beige: #f5f5dc; /*used for backgrounds*/
+  /* Secondary Colors */
+  --dark-sage: #2f4f4f; /* used for text on light backgrounds */
+  --light-beige: #faf9f6; /* used for backgrounds or cards */
+  /* Accent Colors */
+  --coral: #ff7f50; /* used for call-to-action buttons or important highlights*/
+  --white: #ffffff; /*used for text on dark backgrounds or overlays*/
+  /* Neutral Colors */
+  --dark-grey: #333333; /* used for body text*/
+  --light-grey: #cccccc; /* used for borders or disabled elements*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+* {
+  transition: all 200ms;
+  font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+  color: #333333;
+  size: 16px;
+  border-radius: 8px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Header styles */
+nav {
+  background-color: #597d72;
+  color: #ffffff;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  float: right;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+#headings {
+  font-size: 30px;
+  text-align: center;
+  padding: 25px;
+  padding-bottom: 40px;
+}
+
+section {
+  padding: 40px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+#user-name {
+  color: var(--dark-sage);
+}
+section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+  margin: 0;
+}
+
+section li {
+  display: flex;
+  gap: 20px;
+}
+section img {
+  object-fit: cover;
+}
+
+.pet-info {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+button {
+  width: 150px;
+  padding: 10px 22px;
+  border-radius: 14px;
+  font-size: 16px;
+  border: none;
+  background-color: var(--sage-green);
+  color: var(--white);
+}
+
+ul button {
+  width: 80px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: none;
+  background-color: var(--sage-green);
+  color: var(--white);
+  margin-right: 8px;
+}
+
+/* Footer styles */
+
+footer {
+  background-color: var(--sage-green);
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  margin-top: auto;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
