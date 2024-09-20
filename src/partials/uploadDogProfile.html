@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="./favicon.png" />
+    <title>PAWS LOGIN</title>
+    <link rel="stylesheet" href="../css/uploadDogProfile.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Add additional CSS & JS files as necessary here -->
+  </head>
+  <body>
+    <main>
+      <!-- Nav Bar -->
+      <nav>
+        <ul>
+          <li><a href="./OrganizationsVetsDashboard.html">Dashboard</a></li>
+          <li><a href="#adoptMessage">Message</a></li>
+          <li><a href="#adoptNotification">Notification</a></li>
+          <li><a href="#adoptSettings">Settings</a></li>
+          <li>
+            <a href="../../index.html">Log out</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section>
+        <form class="form-wrapper" id="add-pet-form">
+          <h1>Add New Pet Profile</h1>
+          <p>
+            Provide detailed information about the pet to help them find a
+            forever home.
+          </p>
+          <div class="basic-info">
+            <p>Basic Information</p>
+            <label for="">Pet Name </label><input type="text" />
+            <label for="">Species</label
+            ><select name="" id=""></select>
+            <label for="">Breed</label><input type="text" />
+            <label for="gender ">Gender</label>
+            <div class="form-radio-btn">
+              <input type="radio" id="male" name="gender" value="Male" />
+              <label for="male">Male</label>
+
+              <input type="radio" id="female" name="gender" value="Female" />
+              <label for="female">Female</label>
+
+              <input type="radio" id="others" name="gender" value="Others" />
+              <label for="others">Others</label>
+            </div>
+            <label for="">Age</label><input type="text" />
+            <label for="">Size</label
+            ><select name="" id=""></select>
+            <label for="">Color / Coat</label> <input type="text" />
+          </div>
+
+          <div class="health-info">
+            <p>Health and Medical Information</p>
+            <label for="spayed-neutered">Spayed/Neutered </label>
+            <div class="form-radio-btn">
+              <input type="radio" id="yes" name="spayed-neutered" value="Yes" />
+              <label for="yes">Yes</label>
+
+              <input type="radio" id="no" name="spayed-neutered" value="No" />
+              <label for="no">No</label>
+            </div>
+            <label for="vaccin">SVaccinations Up to Date</label>
+            <div class="form-radio-btn">
+              <input type="radio" id="yes-2" name="vaccin" value="Yes" />
+              <label for="yes-2">Yes</label>
+
+              <input type="radio" id="no-2" name="vaccin" value="No" />
+              <label for="no-2">No</label>
+            </div>
+
+            <label for="Microchipped">Microchipped</label>
+            <div class="form-radio-btn">
+              <input type="radio" id="yes-3" name="microchipped" value="Yes" />
+              <label for="yes-3">Yes</label>
+
+              <input type="radio" id="no-3" name="microchipped" value="No" />
+              <label for="no-3">No</label>
+            </div>
+
+            <label for="">Special Needs</label><input type="text" />
+          </div>
+
+          <div class="behavior">
+            <p>Personality and Behavior</p>
+            <div>
+              <input type="checkbox" name="" id="friend" />
+              <label class="check" for="friend">Friendly</label>
+              <input type="checkbox" name="" id="calm" /><label
+                class="check"
+                for="calm"
+                >Calm</label
+              >
+
+              <input type="checkbox" name="" id="special" />
+              <label class="check" for="special">Special Training</label>
+
+              <input type="checkbox" name="" id="energetic" />
+              <label class="check" for="energetic">Energetic</label>
+              <input type="checkbox" name="" id="shy" />
+              <label class="check" for="shy">Shy</label>
+
+              <input type="checkbox" name="" id="good" /><label
+                class="check"
+                for="good"
+                >Good with Other Animals</label
+              >
+
+              <input type="checkbox" name="" id="house" /><label
+                class="check"
+                for="house"
+                >House-Trained</label
+              >
+
+              <input type="checkbox" name="" id="good-child" /><label
+                class="check"
+                for="good-child"
+                >Good with Children</label
+              >
+            </div>
+
+            <label for="">Behavior Notes</label><input type="text" />
+          </div>
+
+          <div class="adoption-details">
+            <p>Adoption Details</p>
+            <label for="">Adoption Free </label><input type="text" />
+            <label for="">Availability Status</label
+            ><select name="" id=""></select>
+            <label for="">Additional Adoption Info</label><input type="text" />
+          </div>
+          <div class="upload-photo">
+            <p>Photos and Media</p>
+            <label for="avatar">Upload Photo(s)/Video(s):</label>
+
+            <input
+              type="file"
+              id="avatar"
+              name="avatar"
+              accept="image/png, image/jpeg"
+            />
+          </div>
+          <label for="">Detail Description</label>
+          <textarea
+            name=""
+            id=""
+            placeholder="1000 chapters remaining"
+          ></textarea>
+          <div>
+            <button type="button">Preview</button>
+            <button type="submit">Publish Pet Profile</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <ul>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#find-a-pet">Find a Pet</a></li>
+        <li><a href="#donate">Donate</a></li>
+        <li><a href="#volunteer">Volunteer</a></li>
+        <li><a href="#rescue-organizations">Rescue Organizations</a></li>
+        <li><a href="#contact-us">Contact Us</a></li>
+        <li><a href="#privacy-policy">Privacy Policy</a></li>
+        <li><a href="#terms-of-service">Terms of Service</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+      </ul>
+    </footer>
+    <script src="../js/addPetProfile.js"></script>
+  </body>
+</html>
